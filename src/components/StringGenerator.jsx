@@ -9,7 +9,6 @@ const StringGenerator = () => {
   const [showOptions, setShowOptions] = useState(true);
   const generateString = () => {
     // Generate a unique string based on user options
-    // Ensure the generated string is unique, you might want to implement your logic here
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     const specialChars = '!@#$%^&*()-_=+[]{}|;:\'",.<>?/';
     const allChars = includeSpecialChars ? characters + specialChars : characters;
@@ -24,7 +23,6 @@ const StringGenerator = () => {
       resultString.slice(0, randomPosition) + customPhrase + resultString.slice(randomPosition);
     setGeneratedString(resultString);
     setShowOptions(false);
-    // Redirect to the separate page
   };
 
   const showOptionsAgain = () => {
